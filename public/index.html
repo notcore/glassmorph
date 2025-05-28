@@ -423,24 +423,6 @@
   </footer> -->
     </div>
 
-  <script>
-   // Populate the fast development grid squares with highlights
-    const container = document.querySelector(
-      "section:nth-of-type(2) > div:first-child > div"
-    );
-    const template = document.getElementById("fast-dev-squares").content;
-    const data = JSON.parse(document.getElementById("fast-dev-data").textContent);
-    for (let i = 1; i <= 25; i++) {
-      const clone = template.cloneNode(true).children[0];
-      const highlight = data.highlighted.find((h) => h.pos === i);
-      if (highlight) {
-        clone.classList.remove("bg-gray-800");
-        clone.classList.add("bg-blue-600", "text-white", "flex", "justify-center", "items-center", "text-xs", "font-semibold", "cursor-default");
-        clone.textContent = highlight.text;
-      }
-      container.appendChild(clone);
-    }
-  </script>
 
 
 </body>
