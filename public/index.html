@@ -4,426 +4,228 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tailwind Layout</title>
- <link href="./src/output.css" rel="stylesheet">
-  <style>
-
-    /* Custom scrollbar for X only */
-    .scroll-x::-webkit-scrollbar {
-      height: 6px;
-    }
-
-    .scroll-x::-webkit-scrollbar-thumb {
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 9999px;
-    }
-
-    .scroll-x::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    /* Hide Y scrollbar while allowing scroll */
-    .scroll-y-hidden {
-      scrollbar-width: none;
-    }
-
-    .scroll-y-hidden::-webkit-scrollbar {
-      display: none;
-    }
-  </style>
+  <link href="./src/output.css" rel="stylesheet">
   <link rel="stylesheet" href="./src/style.css">
 </head>
 <body class="bg-black text-white">
 
-    <div class="bg-[url('/background/revisi3.jpg')] min-h-screen m-0 z-20">
-
+    <!-- bagian 1 -->
+  <div class="bg-[url('/public/background/revisi3.jpg')] bg-cover bg-center min-h-screen">
     <div class="md:mx-20 lg:mx-30 mx-10">
-        <!-- title -->
-         <div class="text-center max-w-4xl mx-auto mb-12">
-            <h1 class="text-white mt-4 text-2xl sm:text-3xl font-semibold text-center max-w-4xl">
-                Why Should
-                <br>
-                <span class="white">
-                You Choose
-                </span>
-                <!-- <i class="fas fa-play-circle text-white mx-1">
-                </i> -->
-                <span class="text-white">
-                Me?
-                </span>
-            </h1>
-            <p class="text-gray-300 text-sm sm:text-base mt-2">
-                Why should you choose me specifically over other developers?
-            </p>
+      <!-- Title -->
+      <div class="text-center max-w-4xl mx-auto mb-12">
+        <h1 class="text-white mt-4 text-2xl sm:text-3xl font-semibold text-center max-w-4xl">
+          Why Should<br>
+          <span class="white">You Choose</span>
+          <span class="text-white">Me?</span>
+        </h1>
+        <p class="text-gray-300 text-sm sm:text-base mt-2">
+          Why should you choose me specifically over other developers?
+        </p>
+      </div>
+
+      <!-- bagian atas 3 card -->
+      <div class="relative">
+        <div class="scroll-x scroll-y-hidden flex gap-2 overflow-x-auto lg:grid lg:grid-cols-3 lg:gap-2">
+          <!-- Box 1 -->
+          <div class="min-w-[280px] relative glassmorph glow1 box-bg bg-box-1 h-[300px] p-4 flex flex-col justify-between items-center text-center rounded">
+            <div class="w-full">
+              <strong class="text-xl">Code by hyuma</strong><br />
+              <small>Lorem, ipsum dolor.</small>
+              <img src="cardbg/1-1.png" class="h-auto max-w-full xl:-mt-10 object-contain mt-2 select-none pointer-events-none" oncontextmenu="return false;" alt="">
+            </div>
           </div>
-
-              <!-- Atas: Grid 3 Box (scroll-x only) -->
-        <div class="relative">
-            <!-- Kabut kiri-kanan khusus scroll-x -->
-            <!-- <div class="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-black via-black/20 to-transparent z-10"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-black via-black/20 to-transparent z-10"></div> -->
-
-            <div class="scroll-x scroll-y-hidden flex gap-5 overflow-x-auto lg:grid lg:grid-cols-3 lg:gap-5">
-            <!-- Box 1 -->
-                <div class="min-w-[280px] relative glassmorph glow1 h-[300px] bg-gray-600 p-4 flex flex-col justify-between items-center text-center rounded overflow-hidden">
-                <div class="w-full">
-                    <strong class="text-xl">Code by hyuma</strong><br />
-                    <small>Lorem, ipsum dolor.</small>
-                    <img src="cardbg/1-1.png" class="h-auto max-w-full xl:-mt-10 object-contain mt-2select-none pointer-events-none" oncontextmenu="return false;" alt="">
-                </div>
-                </div>
-
-            <!-- Box 2 -->
-            <div class="min-w-[280px] glassmorph glow1 h-[300px] bg-gray-600 p-4 flex flex-col justify-between items-center text-center rounded">
-                <div>
-                <strong>template</strong><br />
-                <small>template web glassmorph</small>
-                </div>
-                <img src="cardbg/2.png" class="h-auto lg:max-w-[230px] max-w-full object-contain mt-2select-none pointer-events-none" oncontextmenu="return false;" alt="">
+          <!-- Box 2 -->
+          <div class="min-w-[280px] glassmorph glow1 box-bg bg-box-2 h-[300px] p-4 flex flex-col justify-between items-center text-center rounded">
+            <div>
+              <strong>template</strong><br />
+              <small>template web glassmorph</small>
             </div>
-            <!-- Box 3 -->
-            <div class="min-w-[280px] glassmorph glow1 h-[300px] bg-gray-600 p-4 flex flex-col justify-between items-center text-center rounded">
-                <img src="cardbg/3.png" class="h-auto lg:max-w-[270px] max-w-full object-contain mt-2select-none pointer-events-none" oncontextmenu="return false;" alt="">
-                <div class="-mt-10 absolute bottom-4">
-                <strong>fasilitas</strong><br />
-                <small>fasilitas dari template ini</small>
-                </div>
+            <img src="cardbg/2.png" class="h-auto lg:max-w-[230px] max-w-full object-contain mt-2 select-none pointer-events-none" oncontextmenu="return false;" alt="">
+          </div>
+          <!-- Box 3 -->
+          <div class="min-w-[280px] glassmorph glow1 box-bg bg-box-3 h-[300px] p-4 flex flex-col justify-between items-center text-center rounded">
+            <img src="cardbg/3.png" class="h-auto lg:max-w-[270px] max-w-full object-contain mt-2 select-none pointer-events-none" oncontextmenu="return false;" alt="">
+            <div class="-mt-10 absolute bottom-4">
+              <strong>fasilitas</strong><br />
+              <small>fasilitas dari template ini</small>
             </div>
-            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Bawah: Flex 2 box (scroll-x only) -->
-        <div class="relative mt-4 ">
-            <!-- Kabut kiri-kanan khusus scroll-x -->
-
-            <div class=" flex gap-5 flex-wrap md:flex-nowrap">
-            <!-- Box 4 -->
-            <div class="min-w-[280px] overflow-hidden glassmorph glow1 h-[320px] bg-gray-600 p-4 flex w-full flex-col justify-between items-center text-center rounded">
-                <div>
-                <strong>revisi</strong><br />
-                <small>kalo mau revisi whatsapp aja</small>
-                </div>
-                <img src="cardbg/4.png" class="h-auto -ml-10 -mt-2 max-w-full object-containselect-none pointer-events-none" oncontextmenu="return false;" alt="">
+      <!-- Bawah: Flex 2 box -->
+      <div class="relative mt-4">
+        <div class="flex gap-5 flex-wrap md:flex-nowrap">
+          <!-- Box 4 -->
+          <div class="min-w-[280px] fade-up zoom-up overflow-hidden glassmorph glow1 h-[320px] p-4 flex w-full flex-col justify-between items-center text-center rounded">
+            <div>
+              <strong class="text-xl">revisi</strong><br />
+              <small>kalo mau revisi whatsapp aja</small>
             </div>
-            <!-- Box 5 -->
-            <div class="min-w-[280px] glassmorph overflow-hidden glow1 h-[320px] w-full bg-gray-600 p-4 flex flex-col justify-between items-center text-center rounded border-2">
-                <img src="cardbg/5.png" class="h-auto -mt-2 max-w-full sm:max-w-[450px] lg:max-w-[460px] object-containselect-none pointer-events-none ml-[180px]" oncontextmenu="return false;" alt="">
-                <div class="absolute bottom-0 text-right mb-6 right-5">
-                <strong>tittle</strong><br />
-                <small>Lorem ipsum dolor sit.</small>
-                </div>
+            <img src="cardbg/4.png" class="h-auto min-w-[450px] -ml-10 -mt-2 max-w-full object-contain select-none pointer-events-none" oncontextmenu="return false;" alt="">
+          </div>
+          <!-- Box 5 -->
+          <div class="min-w-[280px] fade-up zoom-up glassmorph overflow-hidden glow1 h-[320px] w-full p-4 flex flex-col justify-between items-center text-center rounded">
+            <img src="cardbg/5.png" class="-mt-2 min-w-[450px] h-full lg:max-w-[460px] object-contain select-none pointer-events-none ml-[180px]" oncontextmenu="return false;" alt="">
+            <div class="absolute bottom-0 text-right mb-6 right-5">
+              <strong class="text-xl">tittle</strong><br />
+              <small>Lorem ipsum dolor sit.</small>
             </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
-    </div>
-
-
-  <div class="bg-[url('/background/bg2.jpg')] min-h-screen bg-cover">
+  <!-- bagian 2 -->
+  <div class="bg-[url('/public/background/bg2.jpg')] min-h-screen bg-cover">
     
-  <section class="w-full mx-auto max-w-7xl flex flex-col items-center mb-12 space-y-6">
-   <h2 class="text-white mt-4 text-2xl sm:text-3xl font-semibold text-center max-w-4xl">
-    What Do People
-    <span class="text-white">
-     Say
-    </span>
-    <!-- <i class="fas fa-play-circle text-white mx-1">
-    </i> -->
-    <span class="text-white">
-     About Us?
-    </span>
-   </h2>
-   <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-7xl px-2 sm:px-0">
-    <!-- Testimonial 1 -->
-    <div class="glassmorph glow1 glow-card-strong p-6 rounded-lg flex flex-col justify-between min-h-[180px]">
-     <p class="text-gray-300 text-xs leading-tight mb-4">
-      "Muslim was a pleasure to work with! The project was delivered ahead of schedule, and the quality exceeded our expectations. The website is clean, responsive, and intuitive. I highly recommend him to anyone looking for a professional and dedicated developer"
-     </p>
-     <div class="flex items-center space-x-3">
-      <img alt="Theresa Richards avatar with short hair" class="rounded-full border border-gray-600" height="40" src="https://storage.googleapis.com/a1aa/image/82fc619c-5c8a-498f-8c9f-67dd2d96a8e8.jpg" width="40"/>
-      <div>
-       <p class="text-white text-sm font-semibold">
-        Theresa Richards
-       </p>
-       <p class="text-gray-400 text-xs">
-        UI/UX Designer
-       </p>
-      </div>
-     </div>
-    </div>
-    <!-- Testimonial 2 -->
-    <div class="glassmorph glow1 glow-card-strong p-6 rounded-lg flex flex-col justify-between min-h-[180px]">
-     <p class="text-gray-300 text-xs leading-tight mb-4">
-      "Muslim was a pleasure to work with! The project was delivered ahead of schedule, and the quality exceeded our expectations. The website is clean, responsive, and intuitive. I highly recommend him to anyone looking for a professional and dedicated developer"
-     </p>
-     <div class="flex items-center space-x-3">
-      <img alt="Esther Howard avatar with short hair" class="rounded-full border border-gray-600" height="40" src="https://storage.googleapis.com/a1aa/image/9e9ae342-938c-4892-cbae-846dcd6b11b2.jpg" width="40"/>
-      <div>
-       <p class="text-white text-sm font-semibold">
-        Esther Howard
-       </p>
-       <p class="text-gray-400 text-xs">
-        SEO - Manager
-       </p>
-      </div>
-     </div>
-    </div>
-    <!-- Testimonial 3 -->
-    <div class="glassmorph glow1 glow-card-strong p-6 rounded-lg flex flex-col justify-between min-h-[180px]">
-     <p class="text-gray-300 text-xs leading-tight mb-4">
-      "Muslim was a pleasure to work with! The project was delivered ahead of schedule, and the quality exceeded our expectations. The website is clean, responsive, and intuitive. I highly recommend him to anyone looking for a professional and dedicated developer"
-     </p>
-     <div class="flex items-center space-x-3">
-      <img alt="Theresa Richards avatar with short hair" class="rounded-full border border-gray-600" height="40" src="https://storage.googleapis.com/a1aa/image/82fc619c-5c8a-498f-8c9f-67dd2d96a8e8.jpg" width="40"/>
-      <div>
-       <p class="text-white text-sm font-semibold">
-        Theresa Richards
-       </p>
-       <p class="text-gray-400 text-xs">
-        UI/UX Designer
-       </p>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Pricing Section -->
-  <section class="w-full mx-auto max-w-7xl flex flex-col items-center mb-12 space-y-8">
-   <h2 class="text-white text-2xl sm:text-3xl font-semibold text-center max-w-4xl">
-    Choose Your Perfect Plan
-    <span class="text-white">
-     Right
-    </span>
-    <i class="fas fa-play-circle text-white mx-1">
-    </i>
-    <span class="text-white">
-     Now
-    </span>
-   </h2>
-   <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-7xl px-2 sm:px-0">
-    <!-- Starter Pack -->
-    <div class="glow-card-strong glassmorph glow1 p-6 rounded-lg flex flex-col min-h-[360px]">
-     <h3 class="text-white font-semibold text-lg mb-2">
-      Starter Pack
-     </h3>
-     <p class="text-gray-400 text-xs mb-4 max-w-[280px]">
-      Ideal for beginner projects and startups
-     </p>
-     <p class="text-white font-bold text-2xl mb-6">
-      $15
-      <span class="text-gray-400 font-normal text-sm">
-       /project
-      </span>
-     </p>
-     <button class="glow-button w-full py-2 text-white font-semibold mb-6" type="button">
-      Go Starter
-     </button>
-     <ul class="text-gray-400 text-xs space-y-1 max-w-[280px]">
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>''
-       SEO - optimization
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       Clean code
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       Free edit
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       Code Source
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       API integration
-      </li>
-      <li class="opacity-40">
-       <i class="fas fa-check-circle mr-2">
-       </i>
-       Work with the database
-      </li>
-      <li class="opacity-40">
-       <i class="fas fa-check-circle mr-2">
-       </i>
-       DDoS Protection
-      </li>
-      <li class="opacity-40">
-       <i class="fas fa-check-circle mr-2">
-       </i>
-       Connecting DevOps
-      </li>
-      <li class="opacity-40">
-       <i class="fas fa-check-circle mr-2">
-       </i>
-       SQL injection protection
-      </li>
-      <li class="opacity-40">
-       <i class="fas fa-check-circle mr-2">
-       </i>
-       XSS injection Protection
-      </li>
-     </ul>
-    </div>
-    <!-- Advanced Pack -->
-    <div class="glow-card-strong glassmorph glow1 p-6 rounded-lg flex flex-col min-h-[360px]">
-     <h3 class="text-white font-semibold text-lg mb-2">
-      Advanced Pack
-     </h3>
-     <p class="text-gray-400 text-xs mb-4 max-w-[280px]">
-      Ideal for mid-scale projects
-     </p>
-     <p class="text-white font-bold text-2xl mb-6">
-      $35
-      <span class="text-gray-400 font-normal text-sm">
-       /project
-      </span>
-     </p>
-     <button class="glow-button w-full py-2 text-white font-semibold mb-6" type="button">
-      Go Advanced
-     </button>
-     <ul class="text-gray-400 text-xs space-y-1 max-w-[280px]">
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       SEO - optimization
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       Clean code
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       Free edit
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       Code Source
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       API integration
-      </li>
-      <li class="opacity-40">
-       <i class="fas fa-check-circle mr-2">
-       </i>
-       Work with the database
-      </li>
-      <li class="opacity-40">
-       <i class="fas fa-check-circle mr-2">
-       </i>
-       DDoS Protection
-      </li>
-      <li class="opacity-40">
-       <i class="fas fa-check-circle mr-2">
-       </i>
-       Connecting DevOps
-      </li>
-      <li class="opacity-40">
-       <i class="fas fa-check-circle mr-2">
-       </i>
-       SQL injection protection
-      </li>
-      <li class="opacity-40">
-       <i class="fas fa-check-circle mr-2">
-       </i>
-       XSS injection Protection
-      </li>
-     </ul>
-    </div>
-    <!-- Professional Pack -->
-    <div class="glow-card-strong glassmorph glow1 p-6 rounded-lg flex flex-col min-h-[360px]">
-     <h3 class="text-white font-semibold text-lg mb-2">
-      Professional Pack
-     </h3>
-     <p class="text-gray-400 text-xs mb-4 max-w-[280px]">
-      Suitable for large companies
-     </p>
-     <p class="text-white font-bold text-2xl mb-6">
-      $75
-      <span class="text-gray-400 font-normal text-sm">
-       /project
-      </span>
-     </p>
-     <button class="glow-button w-full py-2 text-white font-semibold mb-6" type="button">
-      Go Professional
-     </button>
-     <ul class="text-gray-400 text-xs space-y-1 max-w-[280px]">
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       SEO - optimization
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       Clean code
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       Free edit
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       Code Source
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       API integration
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       Work with the database
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       DDoS Protection
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       Connecting DevOps
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       SQL injection protection
-      </li>
-      <li>
-       <i class="fas fa-check-circle text-white mr-2">
-       </i>
-       XSS injection Protection
-      </li>
-     </ul>
-    </div>
-   </div>
-  </section>
-  <!-- Footer Text -->
-  <!-- <footer class="mb-12 text-center max-w-4xl">
-   <p class="text-white text-xl sm:text-2xl font-semibold leading-tight">
-    Stop Wasting Time
-    <br/>
-    On Incompetent Developers
-   </p>
-  </footer> -->
-    </div>
+    <section class="w-full mx-auto max-w-7xl flex flex-col items-center mb-12 space-y-6">
+      <!-- title -->
+      <h2 class="text-white mt-10 text-2xl sm:text-3xl font-semibold text-center max-w-4xl">
+        What Do People
+        <span class="text-white">Say</span>
+        <span class="text-white">About Us?</span>
+      </h2>
 
+      <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-7xl px-2 sm:px-0">
+        <!-- Testimonial 1 -->
+        <div class="glassmorph fade-blur glow1 glow-card-strong p-6 rounded-lg flex flex-col justify-between min-h-[180px]">
+          <p class="text-gray-300 text-xs leading-tight mb-4">
+            "Muslim was a pleasure to work with! The project was delivered ahead of schedule, and the quality exceeded our expectations. The website is clean, responsive, and intuitive. I highly recommend him to anyone looking for a professional and dedicated developer"
+          </p>
+          <div class="flex items-center space-x-3">
+            <img alt="Theresa Richards avatar with short hair" class="rounded-full border border-gray-600" height="40" src="https://storage.googleapis.com/a1aa/image/82fc619c-5c8a-498f-8c9f-67dd2d96a8e8.jpg" width="40"/>
+            <div>
+              <p class="text-white text-sm font-semibold">Theresa Richards</p>
+              <p class="text-gray-400 text-xs">UI/UX Designer</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="glassmorph fade-blur glow1 glow-card-strong p-6 rounded-lg flex flex-col justify-between min-h-[180px]">
+          <p class="text-gray-300 text-xs leading-tight mb-4">
+            "Muslim was a pleasure to work with! The project was delivered ahead of schedule, and the quality exceeded our expectations. The website is clean, responsive, and intuitive. I highly recommend him to anyone looking for a professional and dedicated developer"
+          </p>
+          <div class="flex items-center space-x-3">
+            <img alt="Esther Howard avatar with short hair" class="rounded-full border border-gray-600" height="40" src="https://storage.googleapis.com/a1aa/image/9e9ae342-938c-4892-cbae-846dcd6b11b2.jpg" width="40"/>
+            <div>
+              <p class="text-white text-sm font-semibold">Esther Howard</p>
+              <p class="text-gray-400 text-xs">SEO - Manager</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="glassmorph fade-blur glow1 glow-card-strong p-6 rounded-lg flex flex-col justify-between min-h-[180px]">
+          <p class="text-gray-300 text-xs leading-tight mb-4">
+            "Muslim was a pleasure to work with! The project was delivered ahead of schedule, and the quality exceeded our expectations. The website is clean, responsive, and intuitive. I highly recommend him to anyone looking for a professional and dedicated developer"
+          </p>
+          <div class="flex items-center space-x-3">
+            <img alt="Theresa Richards avatar with short hair" class="rounded-full border border-gray-600" height="40" src="https://storage.googleapis.com/a1aa/image/82fc619c-5c8a-498f-8c9f-67dd2d96a8e8.jpg" width="40"/>
+            <div>
+              <p class="text-white text-sm font-semibold">Theresa Richards</p>
+              <p class="text-gray-400 text-xs">UI/UX Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Pricing Section -->
+    <section class="w-full mx-auto max-w-7xl flex flex-col items-center mb-12 space-y-8">
 
+      <!-- tittle -->
+      <h2 class="text-white text-2xl sm:text-3xl font-semibold text-center max-w-4xl">
+        Choose Your Perfect Plan
+        <span class="text-white">Right</span>
+        <i class="fas fa-play-circle text-white mx-1"></i>
+        <span class="text-white">Now</span>
+      </h2>
+
+      <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-7xl px-2 sm:px-0">
+        <!-- Starter Pack -->
+        <div class="glow-card-strong fade-up zoom-up glassmorph glow1 p-6 rounded-lg flex flex-col min-h-[360px]">
+          <h3 class="text-white font-semibold text-lg mb-2">Starter Pack</h3>
+          <p class="text-gray-400 text-xs mb-4 max-w-[280px]">
+            Ideal for beginner projects and startups
+          </p>
+          <p class="text-white font-bold text-2xl mb-6">
+            $15
+            <span class="text-gray-400 font-normal text-sm">/project</span>
+          </p>
+          <button class="glow-button w-full py-2 text-white font-semibold mb-6" type="button">
+            Go Starter
+          </button>
+          <ul class="text-gray-400 text-xs space-y-1 max-w-[280px]">
+            <li><i class="fas fa-check-circle text-white mr-2"></i>SEO - optimization</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>Clean code</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>Free edit</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>Code Source</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>API integration</li>
+            <li class="opacity-40"><i class="fas fa-check-circle mr-2"></i>Work with the database</li>
+            <li class="opacity-40"><i class="fas fa-check-circle mr-2"></i>DDoS Protection</li>
+            <li class="opacity-40"><i class="fas fa-check-circle mr-2"></i>Connecting DevOps</li>
+            <li class="opacity-40"><i class="fas fa-check-circle mr-2"></i>SQL injection protection</li>
+            <li class="opacity-40"><i class="fas fa-check-circle mr-2"></i>XSS injection Protection</li>
+          </ul>
+        </div>
+        <!-- Advanced Pack -->
+        <div class="glow-card-strong fade-up zoom-up glassmorph glow1 p-6 rounded-lg flex flex-col min-h-[360px]">
+          <h3 class="text-white font-semibold text-lg mb-2">Advanced Pack</h3>
+          <p class="text-gray-400 text-xs mb-4 max-w-[280px]">
+            Ideal for mid-scale projects
+          </p>
+          <p class="text-white font-bold text-2xl mb-6">
+            $35
+            <span class="text-gray-400 font-normal text-sm">/project</span>
+          </p>
+          <button class="glow-button w-full py-2 text-white font-semibold mb-6" type="button">
+            Go Advanced
+          </button>
+          <ul class="text-gray-400 text-xs space-y-1 max-w-[280px]">
+            <li><i class="fas fa-check-circle text-white mr-2"></i>SEO - optimization</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>Clean code</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>Free edit</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>Code Source</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>API integration</li>
+            <li class="opacity-40"><i class="fas fa-check-circle mr-2"></i>Work with the database</li>
+            <li class="opacity-40"><i class="fas fa-check-circle mr-2"></i>DDoS Protection</li>
+            <li class="opacity-40"><i class="fas fa-check-circle mr-2"></i>Connecting DevOps</li>
+            <li class="opacity-40"><i class="fas fa-check-circle mr-2"></i>SQL injection protection</li>
+            <li class="opacity-40"><i class="fas fa-check-circle mr-2"></i>XSS injection Protection</li>
+          </ul>
+        </div>
+        <!-- Professional Pack -->
+        <div class="glow-card-strong fade-up zoom-up glassmorph glow1 p-6 rounded-lg flex flex-col min-h-[360px]">
+          <h3 class="text-white font-semibold text-lg mb-2">Professional Pack</h3>
+          <p class="text-gray-400 text-xs mb-4 max-w-[280px]">
+            Suitable for large companies
+          </p>
+          <p class="text-white font-bold text-2xl mb-6">
+            $75
+            <span class="text-gray-400 font-normal text-sm">/project</span>
+          </p>
+          <button class="glow-button w-full py-2 text-white font-semibold mb-6" type="button">
+            Go Professional
+          </button>
+          <ul class="text-gray-400 text-xs space-y-1 max-w-[280px]">
+            <li><i class="fas fa-check-circle text-white mr-2"></i>SEO - optimization</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>Clean code</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>Free edit</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>Code Source</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>API integration</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>Work with the database</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>DDoS Protection</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>Connecting DevOps</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>SQL injection protection</li>
+            <li><i class="fas fa-check-circle text-white mr-2"></i>XSS injection Protection</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/public/src/animate.js"></script>
 </body>
 </html>

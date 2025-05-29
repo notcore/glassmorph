@@ -1,3 +1,5 @@
+/* ? Class yang bisa dipakai */
+
 .glassmorph {
   background: rgba(255, 255, 255, 0.384);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -5,7 +7,10 @@
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.226);
+  position: relative;
+  overflow: hidden;
 }
+
 .glow1 {
   background: #bbbbbb3a;
    transition: all 0.3s ease-in-out;
@@ -21,7 +26,7 @@ button {
   position: relative;
   padding: 10px 20px;
   border-radius: 7px;
-  border: 1px solid rgb(61, 106, 255);
+  border: 1px solid rgba(255, 255, 255, 0.349);
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
@@ -36,8 +41,8 @@ button {
 }
 
 button:hover {
-  background: rgb(61, 106, 255);
-  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  background: rgb(10, 43, 151);
+  box-shadow: 0 0 30px 5px rgba(0, 35, 236, 0.815);
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -67,6 +72,8 @@ button::before {
   transform: skewX(-20deg);
 }
 
+/* ? Animate */
+
 @keyframes sh02 {
   from {
     opacity: 0;
@@ -82,6 +89,37 @@ button::before {
     left: 100%;
   }
 }
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-blur {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 0.6s ease-out;
+}
+.fade-blur.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s ease-out;
+}
+.zoom-in.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
 
 button:active {
   box-shadow: 0 0 0 0 transparent;
@@ -89,3 +127,28 @@ button:active {
   -moz-transition: box-shadow 0.2s ease-in;
   transition: box-shadow 0.2s ease-in;
 }
+
+/* ! bagian scroll */
+
+    .scroll-x::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .scroll-x::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 9999px;
+    }
+
+    .scroll-x::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .scroll-y-hidden {
+      scrollbar-width: none;
+    }
+
+    .scroll-y-hidden::-webkit-scrollbar {
+      display: none;
+    }
+
+
